@@ -1,0 +1,172 @@
+/* ===== Campus Events – shared stylesheet ===== */
+:root{
+  --blue:#1d5fe0; --blue-dark:#1448b0; --blue-soft:#e8f0ff;
+  --navy:#0f2347; --ink:#1b2540; --muted:#5b6785; --line:#dfe6f3;
+  --bg:#f5f8ff; --white:#fff;
+  --tech:#2f6bff;  --tech-bg:#e6efff;
+  --cult:#e2475c;  --cult-bg:#ffe8eb;
+  --sport:#1f9d57; --sport-bg:#e3f7ea;
+  --work:#e08a14;  --work-bg:#fff1d9;
+  --radius:14px; --shadow:0 6px 18px rgba(20,50,120,.09);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+:focus-visible{outline:3px solid #7aa7ff;outline-offset:2px}
+
+/* ---------- Header ---------- */
+header{background:var(--white);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+.nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.2rem}
+.logo-mark{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--blue),#5b9bff);display:grid;place-items:center;font-size:1.05rem}
+.logo b{color:var(--blue)}
+.nav ul{display:flex;gap:6px}
+.nav ul a{padding:7px 14px;border-radius:8px;font-size:.92rem;font-weight:500;color:var(--muted);transition:.2s}
+.nav ul a:hover{background:var(--blue-soft);color:var(--blue)}
+.nav ul a.active{background:var(--blue-soft);color:var(--blue);font-weight:600}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-block;background:var(--blue);color:#fff;padding:10px 22px;border-radius:9px;font-weight:600;font-size:.92rem;border:0;cursor:pointer;transition:.2s;font-family:inherit}
+.btn:hover{background:var(--blue-dark);transform:translateY(-1px)}
+.btn.block{display:block;width:100%;text-align:center}
+.btn.small{padding:6px 16px;font-size:.85rem}
+.btn.light{background:#fff;color:var(--blue)}
+.btn.light:hover{background:var(--blue-soft)}
+
+/* ---------- Hero ---------- */
+.hero{background:linear-gradient(120deg,#0f2f7a 0%,#1d5fe0 55%,#5b9bff 100%);color:#fff;position:relative;overflow:hidden;padding:84px 0}
+.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.08)}
+.hero::before{width:380px;height:380px;right:-80px;top:-120px}
+.hero::after{width:260px;height:260px;right:160px;bottom:-140px}
+.hero .wrap{position:relative;z-index:1}
+.hero h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.15;margin-bottom:14px;max-width:560px}
+.hero p{max-width:520px;color:#dbe7ff;margin-bottom:26px;font-size:1.05rem}
+.page-hero{padding:54px 0}
+.page-hero h1{font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:8px}
+.page-hero p{margin-bottom:0}
+
+/* ---------- Sections ---------- */
+section{padding:48px 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:22px;gap:12px;flex-wrap:wrap}
+h2{font-size:1.5rem;color:var(--navy)}
+.sub{color:var(--muted)}
+.link{color:var(--blue);font-weight:600;font-size:.92rem}
+.link:hover{text-decoration:underline}
+
+/* ---------- Grids ---------- */
+.grid{display:grid;gap:22px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+
+/* ---------- Event cards ---------- */
+.card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:.2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(20,50,120,.14)}
+.thumb{height:130px;display:grid;place-items:center;font-size:3rem;position:relative}
+.thumb.tech{background:linear-gradient(135deg,#1b2f7a,#2f6bff 60%,#8b5cf6)}
+.thumb.cultural{background:linear-gradient(135deg,#a3153a,#e2475c 60%,#ffb36b)}
+.thumb.sports{background:linear-gradient(135deg,#0d6b3b,#1f9d57 60%,#9be15d)}
+.thumb.workshop{background:linear-gradient(135deg,#a85a00,#e08a14 60%,#ffd66b)}
+.thumb .tag{position:absolute;left:12px;bottom:10px}
+.tag{font-size:.74rem;font-weight:600;padding:3px 11px;border-radius:99px;background:#fff}
+.tag.tech{color:var(--tech)} .tag.cultural{color:var(--cult)} .tag.sports{color:var(--sport)} .tag.workshop{color:var(--work)}
+.card-body{padding:16px 18px 20px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card-body h3{font-size:1.08rem;color:var(--navy)}
+.meta{display:flex;gap:14px;font-size:.82rem;color:var(--muted);flex-wrap:wrap}
+.card-body p{font-size:.9rem;color:var(--muted);flex:1}
+.card-body .btn{margin-top:8px;align-self:flex-start}
+
+/* ---------- Info tiles (categories, mission, types) ---------- */
+.tile{border-radius:var(--radius);padding:22px 18px;text-align:center;border:1px solid transparent}
+.tile .ico{font-size:2rem;display:block;margin-bottom:6px}
+.tile h3{font-size:1rem;color:var(--navy);margin-bottom:4px}
+.tile p{font-size:.86rem;color:var(--muted)}
+.tile.tech{background:var(--tech-bg)} .tile.cultural{background:var(--cult-bg)}
+.tile.sports{background:var(--sport-bg)} .tile.workshop{background:var(--work-bg)}
+.tile.plain{background:var(--blue-soft);border-color:#cfe0ff}
+.about-text{max-width:720px;color:var(--muted);font-size:1.02rem}
+
+/* ---------- CSS-only category filter ---------- */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.filters input{position:absolute;opacity:0;pointer-events:none}
+.filters label{padding:7px 18px;border-radius:99px;background:#fff;border:1px solid var(--line);cursor:pointer;font-size:.88rem;font-weight:500;color:var(--muted);transition:.2s}
+.filters label:hover{border-color:var(--blue);color:var(--blue)}
+.filters input:checked + label{background:var(--blue);border-color:var(--blue);color:#fff}
+.filters input:focus-visible + label{outline:3px solid #7aa7ff;outline-offset:2px}
+body:has(#f-tech:checked) .card:not([data-cat="tech"]),
+body:has(#f-cultural:checked) .card:not([data-cat="cultural"]),
+body:has(#f-sports:checked) .card:not([data-cat="sports"]),
+body:has(#f-workshop:checked) .card:not([data-cat="workshop"]){display:none}
+
+/* ---------- Event details ---------- */
+.back{display:inline-block;margin-bottom:14px;color:var(--blue);font-weight:600;font-size:.92rem}
+.detail{display:grid;grid-template-columns:1.6fr 1fr;gap:28px;align-items:start}
+.detail .banner{height:300px;border-radius:var(--radius);font-size:5rem;display:grid;place-items:center;margin-bottom:22px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+.panel h3{margin-bottom:12px;color:var(--navy)}
+.info-row{display:flex;gap:14px;padding:12px 0;border-bottom:1px solid var(--line)}
+.info-row:last-of-type{border-bottom:0}
+.info-row .ico{width:38px;height:38px;border-radius:10px;background:var(--blue-soft);display:grid;place-items:center;flex-shrink:0}
+.info-row small{display:block;color:var(--muted);font-size:.78rem}
+.info-row strong{font-size:.95rem}
+.panel .btn{margin-top:14px}
+
+/* ---------- Schedule table ---------- */
+.table-wrap{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+table{width:100%;border-collapse:collapse;min-width:640px}
+th{background:var(--blue);color:#fff;text-align:left;padding:13px 16px;font-size:.88rem}
+td{padding:13px 16px;border-bottom:1px solid var(--line);font-size:.9rem}
+tbody tr:last-child td{border-bottom:0}
+tbody tr:hover{background:var(--blue-soft)}
+.pill{padding:2px 10px;border-radius:99px;font-size:.78rem;font-weight:600}
+.pill.tech{background:var(--tech-bg);color:var(--tech)} .pill.cultural{background:var(--cult-bg);color:var(--cult)}
+.pill.sports{background:var(--sport-bg);color:var(--sport)} .pill.workshop{background:var(--work-bg);color:var(--work)}
+
+/* ---------- Form ---------- */
+.form{max-width:760px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.field{display:flex;flex-direction:column;gap:5px}
+.field.full{grid-column:1/-1}
+label{font-size:.85rem;font-weight:600;color:var(--navy)}
+label span{color:var(--cult)}
+input[type=text],input[type=email],input[type=tel],input[type=date],select,textarea{width:100%;padding:11px 13px;border:1px solid #c9d5ec;border-radius:9px;font:inherit;font-size:.92rem;background:#fbfcff;color:var(--ink);transition:.2s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(29,95,224,.15)}
+textarea{min-height:100px;resize:vertical}
+.check{display:flex;gap:10px;align-items:center;font-weight:400;font-size:.88rem;color:var(--muted)}
+.check a{color:var(--blue);text-decoration:underline}
+.check input{width:17px;height:17px;accent-color:var(--blue)}
+input:user-invalid,select:user-invalid{border-color:var(--cult)}
+
+/* ---------- Navigation-flow box ---------- */
+.flow{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.flow span{background:#fff;border:1px solid #cfe0ff;border-radius:10px;padding:8px 16px;font-size:.88rem;font-weight:600;color:var(--blue)}
+.flow i{color:var(--muted);font-style:normal}
+
+/* ---------- Footer ---------- */
+footer{background:var(--navy);color:#b8c6e6;padding:40px 0 18px;margin-top:30px}
+.foot{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:28px;margin-bottom:26px}
+footer h4{color:#fff;margin-bottom:10px;font-size:.95rem}
+footer .logo{color:#fff;margin-bottom:8px}
+footer .logo b{color:#7fb0ff}
+footer li{margin-bottom:5px;font-size:.88rem}
+footer li a:hover{color:#fff;text-decoration:underline}
+.social{display:flex;gap:10px}
+.social a{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.1);display:grid;place-items:center;font-size:.8rem;font-weight:700;color:#fff;transition:.2s}
+.social a:hover{background:var(--blue)}
+.copy{border-top:1px solid rgba(255,255,255,.12);padding-top:14px;text-align:center;font-size:.8rem}
+
+/* ---------- Responsive ---------- */
+@media(max-width:900px){
+  .g4{grid-template-columns:repeat(2,1fr)}
+  .g3{grid-template-columns:repeat(2,1fr)}
+  .detail{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .nav{flex-direction:column;height:auto;padding:10px 0;gap:6px}
+  .nav ul{flex-wrap:wrap;justify-content:center}
+  .g3,.g4,.form-grid,.foot{grid-template-columns:1fr}
+  .hero{padding:56px 0}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}

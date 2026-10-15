@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events | Campus Events</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="logo"><span class="logo-mark">🎓</span>Campus <b>Events</b></a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="events.html" class="active">Events</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="register.html">Register</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="wrap">
+      <h1 style="color:var(--navy)">All Events</h1>
+      <p class="sub" style="margin-bottom:22px">Explore upcoming events and be a part of exciting experiences.</p>
+
+      <!-- CSS-only filter: radio buttons + :has() in style.css -->
+      <div class="filters" role="radiogroup" aria-label="Filter by category">
+        <input type="radio" name="f" id="f-all" checked><label for="f-all">All</label>
+        <input type="radio" name="f" id="f-tech"><label for="f-tech">Technical</label>
+        <input type="radio" name="f" id="f-cultural"><label for="f-cultural">Cultural</label>
+        <input type="radio" name="f" id="f-sports"><label for="f-sports">Sports</label>
+        <input type="radio" name="f" id="f-workshop"><label for="f-workshop">Workshop</label>
+      </div>
+
+      <div class="grid g3">
+      <article class="card" data-cat="tech">
+        <div class="thumb tech"><span aria-hidden="true">💻</span><span class="tag tech">Technical</span></div>
+        <div class="card-body">
+          <h3>Tech Fest 2026</h3>
+          <div class="meta"><span>📅 Oct 15, 2026</span><span>📍 Auditorium</span></div>
+          <p>Explore innovation, participate in hackathons, and showcase your skills.</p>
+          <a href="event-details.html" class="btn small">View Details →</a>
+        </div>
+      </article>
+      <article class="card" data-cat="cultural">
+        <div class="thumb cultural"><span aria-hidden="true">🎭</span><span class="tag cultural">Cultural</span></div>
+        <div class="card-body">
+          <h3>Cultural Day</h3>
+          <div class="meta"><span>📅 Oct 20, 2026</span><span>📍 Main Hall</span></div>
+          <p>Celebrate talent, creativity and diversity with music, dance and art performances.</p>
+          <a href="event-details.html" class="btn small">View Details →</a>
+        </div>
+      </article>
+      <article class="card" data-cat="sports">
+        <div class="thumb sports"><span aria-hidden="true">🏆</span><span class="tag sports">Sports</span></div>
+        <div class="card-body">
+          <h3>Inter-College Sports Meet</h3>
+          <div class="meta"><span>📅 Oct 28, 2026</span><span>📍 Sports Ground</span></div>
+          <p>Compete, collaborate and showcase your sportsmanship.</p>
+          <a href="event-details.html" class="btn small">View Details →</a>
+        </div>
+      </article>
+      <article class="card" data-cat="workshop">
+        <div class="thumb workshop"><span aria-hidden="true">🧠</span><span class="tag workshop">Workshop</span></div>
+        <div class="card-body">
+          <h3>AI Workshop</h3>
+          <div class="meta"><span>📅 Nov 05, 2026</span><span>📍 Seminar Hall</span></div>
+          <p>Learn about AI tools and real-world applications.</p>
+          <a href="event-details.html" class="btn small">View Details →</a>
+        </div>
+      </article>
+      <article class="card" data-cat="cultural">
+        <div class="thumb cultural"><span aria-hidden="true">📷</span><span class="tag cultural">Cultural</span></div>
+        <div class="card-body">
+          <h3>Photography Contest</h3>
+          <div class="meta"><span>📅 Nov 12, 2026</span><span>📍 Open Grounds</span></div>
+          <p>Capture moments and showcase your creativity.</p>
+          <a href="event-details.html" class="btn small">View Details →</a>
+        </div>
+      </article>
+      <article class="card" data-cat="tech">
+        <div class="thumb tech"><span aria-hidden="true">🎤</span><span class="tag tech">Technical</span></div>
+        <div class="card-body">
+          <h3>Career Guidance Talk</h3>
+          <div class="meta"><span>📅 Nov 18, 2026</span><span>📍 Auditorium</span></div>
+          <p>Get insights from industry experts about future opportunities.</p>
+          <a href="event-details.html" class="btn small">View Details →</a>
+        </div>
+      </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a href="index.html" class="logo"><span class="logo-mark">🎓</span>Campus <b>Events</b></a>
+        <p>Bringing students together through learning, creativity and collaboration.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="register.html">Register</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <div class="social">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">ig</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="YouTube">▶</a>
+        </div>
+      </div>
+    </div>
+    <p class="copy">© 2026 Campus Events. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>
