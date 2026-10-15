@@ -67,3 +67,28 @@ let result = number3.every((n)=> {return n<30}); // every() - checks if all elem
 console.log(result);
 
 //some()and every() - returns only boolean value [true or false] based on the condition provided in the callback function
+
+const employees = {
+    name:"Neiran",
+    salary: 30000,
+};
+console.log(employees.name)
+console.log(employees["salary"])
+employees.salary=40000
+console.log(employees.salary)
+employees.city="Chennai"
+delete employees.city
+console.log(employees)
+
+
+const student = {
+    name: "Priya",
+    age: 20,
+    address: {
+        City: "Chennai",
+        State: "Tamil Nadu"
+    }
+}
+console.log(student.name)
+console.log(student["age"])
+console.log(student.address.City) 
