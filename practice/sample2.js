@@ -170,3 +170,5 @@ const city2=undefined;
 console.log(username1??"Guest");
 console.log(age1??18);
 console.log(city2??"Chennai");
+
+
