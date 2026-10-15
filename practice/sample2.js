@@ -92,3 +92,81 @@ const student = {
 console.log(student.name)
 console.log(student["age"])
 console.log(student.address.City) 
+
+const orginal={
+    name:"Neiran",
+    age:20,
+}
+const updated={
+    ...orginal,
+    age:21,
+    city:"Chennai"
+}
+console.log(orginal)
+console.log(updated)
+
+//spread - combine operators
+const personal={
+  name:"John",
+  age:30,
+}
+const professional={
+  company:"ABC Corp",
+  job:"Developer"
+}
+const combined={
+  ...personal,
+  ...professional
+}
+console.log(combined)
+
+//in array
+const first=[1,2,3]
+const second=[4,5,6]
+
+const combinedArray=[...first,...second]
+console.log(combinedArray)
+
+const copy =[...first]
+console.log(copy)
+
+//optional chaining
+const user={
+  name:"John",
+  address:{
+    city:"New York",
+    state:"NY"
+  }
+}
+
+//Nullish Coalescing Operator (??)
+const username=null
+const age=0
+const cite=undefined
+console.log(username ?? "Guest") //if username is null or undefined, it will return "Guest"
+console.log(age ?? 18) //if age is null or undefined, it will return 18
+console.log(cite ?? "Chennai") //if cite is null or undefined, it will return "Chennai"
+
+/*|| vs ??*/
+
+console.log(0||100);
+console.log(0??100);
+
+console.log(false||true)
+console.log(false??true)
+
+console.log(""??"Guest")
+console.log(""||"Guest")
+
+const a1= null
+const b1= undefined
+console.log(a1??18)
+
+
+const username1=null;
+const age1=0;
+const city2=undefined;
+
+console.log(username1??"Guest");
+console.log(age1??18);
+console.log(city2??"Chennai");
